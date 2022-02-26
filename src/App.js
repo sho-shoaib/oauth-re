@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Homepage />} />
+        <Route path='/oauth-re/' element={<Homepage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
