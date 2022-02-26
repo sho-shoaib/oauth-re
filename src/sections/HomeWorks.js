@@ -1,5 +1,5 @@
 import { Button, Container, Typography } from "@mui/material";
-import { borderBottom, Box } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import HomeWorksGrid from "../components/HomeWorksGrid";
 
@@ -43,7 +43,6 @@ const HomeWorks = () => {
           sx={{
             color: "black",
             backgroundColor: "yellow",
-            color: "black",
             "&:hover": { backgroundColor: "rgba(245, 230, 83, 0.9)" },
           }}
         >

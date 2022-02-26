@@ -24,7 +24,6 @@ const HomeWorksGridPer = ({ children, trans, mr, ml, color, bg }) => {
         sx={{
           fontWeight: 500,
           fontSize: { xs: 30, md: 32 },
-          fontWeight: 400,
           color: color || "#f5f5f5",
           textAlign: "center",
         }}

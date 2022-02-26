@@ -27,6 +27,18 @@ const HomeFeatures = () => {
     <Box sx={{ backgroundColor: "#f5f5f5", pb: 8, mb: "2vh" }}>
       <Container>
         <Header>Our Features</Header>
+        <Typography
+          variant='h4'
+          sx={{
+            textAlign: "center",
+            maxWidth: "md",
+            marginInline: "auto",
+            mt: 5,
+          }}
+        >
+          Our talented people work hard everyday to find solutions, accept
+          challenges and create value
+        </Typography>
         <Grid container spacing={5} columnSpacing={5} sx={{ mt: 1 }}>
           {data.map((item, i) => {
             return (

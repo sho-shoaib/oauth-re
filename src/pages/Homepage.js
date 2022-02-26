@@ -5,6 +5,7 @@ import HomeWhy from "../sections/HomeWhy";
 import HomeWorks from "../sections/HomeWorks";
 import HomeFeatures from "../sections/HomeFeatures";
 import HomeClient from "../sections/HomeClient";
+import HomeCompanies from "../sections/HomeCompanies";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <HomeWhy />
       <HomeFeatures />
       <HomeClient />
+      <HomeCompanies />
     </>
   );
 };

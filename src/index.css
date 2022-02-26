@@ -1,27 +1,19 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --purple: #6f4686;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-#hero-span {
-  color: yellow;
 }

@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import HomeWorksGridPer from "./HomeWorksGridPer";
 import React from "react";
@@ -34,7 +34,6 @@ const HomeWorksGrid = () => {
             sx={{
               fontWeight: 500,
               fontSize: { xs: 30, md: 35 },
-              fontWeight: 400,
               color: "rgba(245, 230, 83, 0.9)",
             }}
           >
@@ -77,7 +76,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >
@@ -101,7 +99,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >
@@ -125,7 +122,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >
@@ -149,7 +145,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >
@@ -173,7 +168,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >
@@ -197,7 +191,6 @@ const HomeWorksGrid = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "rgba(245, 230, 83, 0.9)",
                 }}
               >

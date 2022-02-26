@@ -32,89 +32,95 @@ const Navbar = () => {
   });
 
   return (
-    <AppBar>
+    <AppBar sx={{ width: "100vw" }}>
       <Toolbar
         sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
+          width: "100vw",
           position: "fixed",
           top: 0,
           backgroundColor: `${trigger ? "#f5f5f5" : "transparent"}`,
           transition: "0.4s",
-          alignItems: "center",
           zIndex: "1000",
           boxShadow: trigger ? 4 : 0,
         }}
       >
-        <Typography
-          variant='h6'
+        <Container
+          maxWidth='xl'
           sx={{
-            fontSize: 30,
-            color: `${trigger ? "black" : "white"}`,
-            transition: "0.1s",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          Logo
-        </Typography>
-        <Box sx={{ display: { xs: "none", md: "inline-block" } }}>
-          <Button
-            variant='contained'
+          <Typography
+            variant='h6'
             sx={{
-              mr: 2,
-              backgroundColor: "rgba(245, 230, 83, 1)",
-              color: "black",
-              "&:hover": { backgroundColor: "rgba(245, 230, 83, 0.9)" },
-            }}
-          >
-            Unlisted
-          </Button>
-          <Button
-            variant='text'
-            sx={{
+              fontSize: 30,
               color: `${trigger ? "black" : "white"}`,
               transition: "0.1s",
             }}
           >
-            About us
-          </Button>
-        </Box>
-        <Box sx={{ display: { xs: "flex", md: "none" }, color: "white" }}>
-          <IconButton
-            size='large'
-            aria-label='account of current user'
-            aria-controls='menu-appbar'
-            aria-haspopup='true'
-            onClick={handleOpenNavMenu}
-            sx={{ color: trigger ? "black" : "white" }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            id='menu-appbar'
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", md: "none" },
-            }}
-          >
-            {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography textAlign='center'>{page}</Typography>
-              </MenuItem>
-            ))}
-          </Menu>
-        </Box>
+            Logo
+          </Typography>
+          <Box sx={{ display: { xs: "none", md: "inline-block" } }}>
+            <Button
+              variant='contained'
+              sx={{
+                mr: 2,
+                backgroundColor: "rgba(245, 230, 83, 1)",
+                color: "black",
+                "&:hover": { backgroundColor: "rgba(245, 230, 83, 0.9)" },
+              }}
+            >
+              Unlisted
+            </Button>
+            <Button
+              variant='text'
+              sx={{
+                color: `${trigger ? "black" : "white"}`,
+                transition: "0.1s",
+              }}
+            >
+              About us
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "flex", md: "none" }, color: "white" }}>
+            <IconButton
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
+              onClick={handleOpenNavMenu}
+              sx={{ color: trigger ? "black" : "white" }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id='menu-appbar'
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign='center'>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Container>
       </Toolbar>
     </AppBar>
   );

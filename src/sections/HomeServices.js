@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import HomeWorksGridPer from "../components/HomeWorksGridPer";
 
@@ -115,7 +115,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
@@ -140,7 +139,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
@@ -166,7 +164,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
@@ -192,7 +189,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
@@ -218,7 +214,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
@@ -244,7 +239,6 @@ const HomeServices = () => {
                 sx={{
                   fontWeight: 500,
                   fontSize: { xs: 30, md: 35 },
-                  fontWeight: 400,
                   color: "black",
                 }}
               >
