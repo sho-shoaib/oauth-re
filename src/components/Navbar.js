@@ -12,10 +12,16 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import { useGlobalContext } from "../context";
+import { useNavigate } from "react-router-dom";
+import ContactModal from "./ContactModal";
 
-const pages = ["Unlisted", "About us"];
+const pages = ["Home", "Contact us", "Demat acc", "About us"];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { handleOpen } = useGlobalContext();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -32,97 +38,145 @@ const Navbar = () => {
   });
 
   return (
-    <AppBar sx={{ width: "100vw" }}>
-      <Toolbar
-        sx={{
-          width: "100vw",
-          position: "fixed",
-          top: 0,
-          backgroundColor: `${trigger ? "#f5f5f5" : "transparent"}`,
-          transition: "0.4s",
-          zIndex: "1000",
-          boxShadow: trigger ? 4 : 0,
-        }}
-      >
-        <Container
-          maxWidth='xl'
+    <>
+      <AppBar sx={{ width: "100vw" }}>
+        <Toolbar
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            width: "100vw",
+            position: "fixed",
+            top: 0,
+            backgroundColor: `${trigger ? "#f5f5f5" : "transparent"}`,
+            transition: "0.4s",
+            zIndex: "1000",
+            boxShadow: trigger ? 4 : 0,
           }}
         >
-          <Typography
-            variant='h6'
+          <Container
+            maxWidth='xl'
             sx={{
-              fontSize: 30,
-              color: `${trigger ? "black" : "white"}`,
-              transition: "0.1s",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            Logo
-          </Typography>
-          <Box sx={{ display: { xs: "none", md: "inline-block" } }}>
-            <Button
-              variant='contained'
+            <Typography
+              variant='h6'
               sx={{
-                mr: 2,
-                backgroundColor: "rgba(245, 230, 83, 1)",
-                color: "black",
-                "&:hover": { backgroundColor: "rgba(245, 230, 83, 0.9)" },
-              }}
-            >
-              Unlisted
-            </Button>
-            <Button
-              variant='text'
-              sx={{
+                fontSize: 30,
                 color: `${trigger ? "black" : "white"}`,
                 transition: "0.1s",
+                cursor: "pointer",
               }}
+              onClick={() => navigate("/oauth-re/")}
             >
-              About us
-            </Button>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" }, color: "white" }}>
-            <IconButton
-              size='large'
-              aria-label='account of current user'
-              aria-controls='menu-appbar'
-              aria-haspopup='true'
-              onClick={handleOpenNavMenu}
-              sx={{ color: trigger ? "black" : "white" }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id='menu-appbar'
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              Logo
+            </Typography>
+            <Box
               sx={{
-                display: { xs: "block", md: "none" },
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  alignItems: "center",
+                  gap: 15,
+                },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Container>
-      </Toolbar>
-    </AppBar>
+              <Button
+                variant='text'
+                sx={{
+                  color: `${trigger ? "black" : "white"}`,
+                  transition: "0.1s",
+                }}
+                onClick={() => navigate("/oauth-re/")}
+              >
+                Home
+              </Button>
+              <Button
+                variant='text'
+                sx={{
+                  color: `${trigger ? "black" : "white"}`,
+                  transition: "0.1s",
+                }}
+                onClick={handleOpen}
+              >
+                Contact us
+              </Button>
+              <Button
+                variant='text'
+                sx={{
+                  color: `${trigger ? "black" : "white"}`,
+                  transition: "0.1s",
+                }}
+                onClick={() => navigate("/oauth-re/demat")}
+              >
+                Demat acc
+              </Button>
+              <Button
+                variant='text'
+                sx={{
+                  color: `${trigger ? "black" : "white"}`,
+                  transition: "0.1s",
+                }}
+                onClick={() => navigate("/oauth-re/")}
+              >
+                About us
+              </Button>
+            </Box>
+            <Box sx={{ display: { xs: "flex", md: "none" }, color: "white" }}>
+              <IconButton
+                size='large'
+                aria-label='account of current user'
+                aria-controls='menu-appbar'
+                aria-haspopup='true'
+                onClick={handleOpenNavMenu}
+                sx={{ color: trigger ? "black" : "white" }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id='menu-appbar'
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.map((page) => (
+                  <MenuItem
+                    key={page}
+                    onClick={() => {
+                      handleCloseNavMenu();
+                      if (page === "Contact us") {
+                        handleOpen();
+                      }
+                      if (page === "Demat acc") {
+                        navigate("/oauth-re/demat");
+                      }
+                      if (page === "Home") {
+                        navigate("/oauth-re/");
+                      }
+                    }}
+                  >
+                    <Typography textAlign='center'>{page}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          </Container>
+        </Toolbar>
+      </AppBar>
+      <ContactModal />
+    </>
   );
 };
 

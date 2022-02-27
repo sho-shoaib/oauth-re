@@ -17,3 +17,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#hero-span {
+  color: rgba(245, 230, 83, 1);
+}

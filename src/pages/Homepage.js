@@ -6,6 +6,7 @@ import HomeWorks from "../sections/HomeWorks";
 import HomeFeatures from "../sections/HomeFeatures";
 import HomeClient from "../sections/HomeClient";
 import HomeCompanies from "../sections/HomeCompanies";
+import ContactModal from "../components/ContactModal";
 
 const Homepage = () => {
   return (
