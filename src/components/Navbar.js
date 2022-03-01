@@ -16,7 +16,7 @@ import { useGlobalContext } from "../context";
 import { useNavigate } from "react-router-dom";
 import ContactModal from "./ContactModal";
 
-const pages = ["Home", "Contact us", "Demat acc", "About us"];
+const pages = ["Home", "Contact us", "Demat acc"];
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -71,7 +71,7 @@ const Navbar = () => {
             >
               Logo
             </Typography>
-            <Box
+            {/* <Box
               sx={{
                 display: {
                   xs: "none",
@@ -110,16 +110,6 @@ const Navbar = () => {
                 onClick={() => navigate("/oauth-re/demat")}
               >
                 Demat acc
-              </Button>
-              <Button
-                variant='text'
-                sx={{
-                  color: `${trigger ? "black" : "white"}`,
-                  transition: "0.1s",
-                }}
-                onClick={() => navigate("/oauth-re/")}
-              >
-                About us
               </Button>
             </Box>
             <Box sx={{ display: { xs: "flex", md: "none" }, color: "white" }}>
@@ -171,7 +161,7 @@ const Navbar = () => {
                   </MenuItem>
                 ))}
               </Menu>
-            </Box>
+            </Box> */}
           </Container>
         </Toolbar>
       </AppBar>

@@ -7,7 +7,7 @@ const HomeHero = () => {
     <Box
       sx={{
         width: "100vw",
-        height: "98vh",
+        height: "90vh",
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
@@ -27,13 +27,19 @@ const HomeHero = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ width: { xs: "100%", md: "80%" } }}>
-            <Typography sx={{ fontSize: { xs: 30, md: 40 }, color: "white" }}>
+          <Box sx={{ width: { xs: "100%", md: "100%" } }}>
+            <Typography
+              sx={{
+                fontSize: { xs: 30, md: 50 },
+                color: "white",
+                textAlign: "center",
+              }}
+            >
               Our <span id='hero-span'>DISCIPLINE</span> helps to turn your{" "}
               <span id='hero-span'>DESIRE</span> into your{" "}
               <span id='hero-span'>DISTINY</span>
             </Typography>
-            <Box
+            {/* <Box
               sx={{
                 display: "flex",
                 flexDirection: { xs: "column", sm: "row" },
@@ -63,7 +69,7 @@ const HomeHero = () => {
               >
                 Open demat Acc
               </Button>
-            </Box>
+            </Box> */}
           </Box>
         </Container>
       </Box>

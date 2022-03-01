@@ -6,7 +6,7 @@ import HomeWorks from "../sections/HomeWorks";
 import HomeFeatures from "../sections/HomeFeatures";
 import HomeClient from "../sections/HomeClient";
 import HomeCompanies from "../sections/HomeCompanies";
-import ContactModal from "../components/ContactModal";
+import ContactBtn from "../components/ContactBtn";
 
 const Homepage = () => {
   return (
@@ -18,6 +18,7 @@ const Homepage = () => {
       <HomeFeatures />
       <HomeClient />
       <HomeCompanies />
+      <ContactBtn />
     </>
   );
 };
